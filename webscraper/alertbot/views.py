@@ -56,7 +56,7 @@ def verify(request):
             user.activated = True
             user.save()
             request.session.flush()
-            return HttpResponseRedirect('/login')
+            return render(request, 'login.html',{'success':'Successfully, verified your number, Please login...','page':'Login'})
         except:
             return render(request, 'verify.html',{'error':'Incorrect OTP, please try again','page':'Verify'})
     else:
