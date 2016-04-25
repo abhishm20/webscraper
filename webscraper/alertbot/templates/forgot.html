@@ -1,0 +1,30 @@
+{% load staticfiles %}
+{% include 'header.html' %}
+<!--Profile container-->
+<div class="container signup" style="text-align: center;">
+    <h3 style="color:#203748">Forgot Password?</h3>
+    <p style="color:#203748">We will send OTP, by which you can change password</p>
+    <form action="/forgot" method="POST">{% csrf_token %}
+        {% if error %}
+        <span class="error">
+            {{ error }}
+        </span>
+        {% endif %}
+        {% if success %}
+        <span class="success">
+            {{ success }}
+        </span>
+        {% endif %}
+        <input type="text" name="mobile" placeholder="Enter Mobile">
+        <br/>
+        <button type="submit" style="margin-left:5px" class="btn btn-large pull-center"><i class="icon-paper-plane"></i> Submit</button>
+    </form>
+</div>
+<!-- Footer -->
+<div class="footer">
+    <div class="container">
+        <p class="pull-left"><a href="/">www.alertbot.com</a></p>
+        <p class="pull-right"><a href="#myModal" role="button" data-toggle="modal"> <i class="icon-mail"></i>Contact us</a></p>
+    </div>
+</div>
+{% include 'footer.html' %}

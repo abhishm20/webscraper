@@ -1,0 +1,26 @@
+{% load staticfiles %}
+<!-- Modal -->
+<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h3 id="myModalLabel"><i class="icon-mail"></i> Contact Me</h3>
+    </div>
+    <div class="modal-body">
+        <form>
+            <input type="text" placeholder="Yopur Name">
+            <input type="text" placeholder="Your Email">
+            <input type="text" placeholder="Website (Optional)">
+            <textarea rows="3" style="width:80%"></textarea>
+            <br/>
+            <button type="submit" class="btn btn-large"><i class="icon-paper-plane"></i> SUBMIT</button>
+        </form>
+    </div>
+</div>
+<!-- Scripts -->
+<script src="http://code.jquery.com/jquery.js"></script>
+<script src="{% static 'js/bootstrap.min.js'%}"></script>
+<script>
+$('#myModal').modal('hide')
+</script>
+</body>
+</html>

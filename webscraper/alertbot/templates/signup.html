@@ -1,0 +1,47 @@
+{% load staticfiles %}
+{% include 'header.html' %}
+<!--Profile container-->
+<div class="container signup" style="text-align: center;">
+    <h3 style="color:#203748">Register yourself</h3>
+    <form action="/signup" method="POST">{% csrf_token %}
+        {% if success %}
+        <span class="success">
+            {{ success }}
+        </span>
+        {% endif %}
+        {% if form.errors.name %}
+            {{ form.errors.name }}
+        {% endif %}
+        <input type="text" name="name" value='{{ form.name.value|default_if_none:"" }}' placeholder="Enter Name">
+        {% if form.errors.email %}
+            {{ form.errors.email }}
+        {% endif %}
+        <input type="text" name="email" value='{{ form.email.value|default_if_none:"" }}' placeholder="Enter Email">
+        {% if form.errors.mobile %}
+            {{ form.errors.mobile }}
+        {% endif %}
+        <input type="text" name="mobile" value='{{ form.mobile.value|default_if_none:"" }}' placeholder="Enter Mobile">
+        <ul class="errorlist">
+            <li>
+                {% if error %}
+                    {{ error }}
+                {% endif %}
+            </li>
+        </ul>
+        {% if form.errors.password %}
+            {{ form.errors.password }}
+        {% endif %}
+        <input type="password" name="password" placeholder="Create Password">
+        <input type="password" name="confirmPassword" placeholder="Repeat Password">
+        <br/>
+        <button type="submit" class="btn btn-large pull-center"><i class="icon-paper-plane"></i> SUBMIT</button>
+    </form>
+</div>
+<!-- Footer -->
+<div class="footer">
+    <div class="container">
+        <p class="pull-left"><a href="/">www.alertbot.com</a></p>
+        <p class="pull-right"><a href="#myModal" role="button" data-toggle="modal"> <i class="icon-mail"></i>Contact us</a></p>
+    </div>
+</div>
+{% include 'footer.html' %}

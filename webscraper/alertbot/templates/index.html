@@ -1,0 +1,22 @@
+{% load staticfiles %}
+{% include 'header.html' %}
+<!--Profile container-->
+<div class="container profile">
+    <div class="span3"> <img src="{% static 'img/banner.jpg'%}"> </div>
+    <div class="span5">
+        <h1>AlertBot</h1>
+        <h3>an alert Engine</h3>
+        <p> An engine which alert users if any changes noticed of all locked items from E-commerce websites</p>
+        <a href="/signup" class="hire-me"><i class="icon-paper-plane"></i> Get Started </a>
+    </div>
+</div>
+<!--END: Profile container-->
+<!-- Footer -->
+<div class="footer">
+    <div class="container">
+        <p class="pull-left"><a href="/">www.alertbot.com</a></p>
+        <p class="pull-right"><a href="#myModal" role="button" data-toggle="modal"> <i class="icon-mail"></i>Contact us</a></p>
+    </div>
+</div>
+</div>
+{% include 'footer.html' %}

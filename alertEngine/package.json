@@ -1,0 +1,15 @@
+{
+  "name": "alertengine",
+  "version": "1.0.0",
+  "description": "It will alert users for any fluctuation of locked item.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "abhishekshm20@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "mysql": "^2.10.2",
+    "python-shell": "^0.4.0"
+  }
+}
